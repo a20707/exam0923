@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>200923</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" type='text/css' href="style.css">
+
+    
+</head>
+
+<body>
+   <header>
+      <div>
+       <h1><a href="index.html">VITA500</a></h1>
+       <nav>
+          <ul>
+              <li><a href="#">ABOUT</a></li>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Contact us</a></li>
+          </ul>
+       </nav>
+       <a class="menu-trigger" href="#">
+           <span></span>
+           <span></span>
+           <span></span>
+       </a>       
+      </div>   
+   </header>
+      
+<main>
+    <div>
+        <p>01</p>
+    </div>
+     <div>
+        <div>
+         <img src="img-vita.png" alt="">
+         </div>
+         <div class="txt">
+             <h2>Special collection
+             of natural product</h2>
+             <p>We strive to bring about a sustainable way of making jewelry,
+    both conscious and enlightened.
+    We wish to create jewels in a spirit of goodwill.
+    </p>
+             <span><a href="#">vIEW PRODUCTS</a></span>
+         </div>
+    </div>
+     <div>
+         <span class="active"></span>
+         <span></span>
+         <span></span>
+     </div>
+</main>
+<div class="popup">
+    <img src="img-popup.jpg" alt="popupimg">
+    <a>닫기</a>
+</div>
+      
+<footer>
+   
+<ul>
+   <li>
+        <p>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+            <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss"
+            alt="올바른 CSS입니다!" />
+            </a>
+        </p>
+    </li>
+    <li><a href="#"><img src="ic_twitter.png" alt="twitter"></a></li>
+    <li><a href="#"><img src="ic_insta.png" alt="insta"></a></li>
+    <li><a href="#"><img src="ic_facebook.png" alt="facebook"></a></li>
+    
+</ul>
+    
+</footer>
+
+<div class="color"> </div>  
+
+   
+<script>
+$(function(){   
+    $('.menu-trigger').on('click',function(){        
+        $('nav').toggle('active');
+       $(this).toggleClass('active');
+
+    });
+
+    
+    
+    $('.txt span').on('click',function(){
+        $('.popup').show();
+        $('.popup a').on('click',function(){
+            $('.popup').hide();
+        });
+    });
+    
+    
+    
+//종료
+});
+    
+    
+</script>
+    
+            
+</body>
+</html>
