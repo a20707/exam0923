@@ -13,6 +13,7 @@ figure{margin:0; padding:0;}
         
 body{
     position:relative;
+    min-height:100vh;
     text-align:center;
     margin:0 auto;
     word-break: keep-all;
@@ -25,7 +26,7 @@ header{
     width:100%;
     z-index:99;
     top:0; left:0;
-    margin-top:60px;
+    margin-top:50px;
 
 }
         
@@ -109,14 +110,23 @@ header>div .menu-trigger.active span:nth-of-type(3) {
 main{
     position:relative;
     width:90%;
+    padding-top:100px;
     margin:0 auto;
-    min-height:100vh;
     display:flex;
     justify-content: center;
     align-items: center;
         }
-main>div:nth-of-type(1){width:5%;}
-main > div:nth-of-type(1) p{position:relative; font-size:1.8em}
+main>div:nth-of-type(1){
+    width:5%;
+    display:flex;
+    flex-direction: column;
+
+}
+main > div:nth-of-type(1) p{
+    position:relative;
+    font-size:1.8em;
+    text-align: left;
+}
 main > div:nth-of-type(1) p:before{
     content: '';
     display:block;
@@ -124,7 +134,7 @@ main > div:nth-of-type(1) p:before{
     width:1px;
     height:100px;
     position: absolute;
-    left:50%;
+    left:20%;
     bottom:150%;    
 
 }
@@ -135,7 +145,7 @@ main > div:nth-of-type(1) p:after{
     width:1px;
     height:100px;
     position: absolute;
-    left:50%;
+    left:20%;
     top:150%;    
 
 }
@@ -182,10 +192,14 @@ main>div:nth-of-type(2) div:nth-of-type(2) span a{
     text-decoration: underline;
 }
 
-main > div:nth-of-type(3){width:5%;}
-main > div:nth-of-type(3) span {
+main > div:nth-of-type(3){
+    width:5%;
     display:flex;
     flex-direction: column;
+    align-items: flex-end;
+}
+main > div:nth-of-type(3) span {
+
     width:15px;
     height:15px;
     margin:10px 0;
@@ -216,8 +230,32 @@ margin:0 1%;
     
     
 @media (min-width: 100px) and (max-width: 768px) {
-    .color{width:100%;}
+    
+.color{width:90%;}
+header{margin-top:0;
 
+    }
+header>div{
+      flex-direction: column;  
+    }
+header>div nav ul {
+    flex-direction: column;
+    padding:20px 0;
+}
+    
+header>div .menu-trigger {
+    position: absolute;
+    width: 30px;
+    height: 16px;
+    z-index: 10;
+    right: 3%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+header>div nav ul li:hover{
+    background:#ffc000;  
+}
+    
 main>div:nth-of-type(2) div:nth-of-type(1){width:100%;}
 main>div:nth-of-type(2) div:nth-of-type(2){width:100%; text-align: center}
 
